@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ItemButton.qml</file>
+        <file>RailPointView.qml</file>
+        <file>RailShuntingSignal.qml</file>
+        <file>RailSignal.qml</file>
+        <file>RailSignalView.qml</file>
+    </qresource>
+</RCC>
