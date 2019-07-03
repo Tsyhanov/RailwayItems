@@ -5,6 +5,9 @@ import QtQuick.Shapes 1.12
 Rectangle{
     id: track_frame
     state: "Stop"
+    width: 120
+    height: 15
+    color: "transparent"
 
     states:[
         State {
@@ -31,18 +34,7 @@ Rectangle{
     ]
 
 
-    Shape{
-        id: track_shape
-        width: 120
-        height: 15
 /*
-        ShapePath{
-            startX: 0
-            startY: 0
-            strokeColor: "grey"
-            strokeWidth: 3
-            PathLine{x:lmp_shape.x; y:lmp_shape.height}
-        }
 
         ShapePath{
             startX: 0
@@ -56,12 +48,8 @@ Rectangle{
             id: track_line
             x: 0
             y: 0
-            width: track_shape.width
-            height: track_shape.height
+            width: parent.width
+            height: parent.height
             state: "Out of Control"
         }
-    }
 }
-
-
-

@@ -5,6 +5,9 @@ import QtQuick.Shapes 1.12
 Rectangle{
     id: lmp_frame
     state: "Stop"
+    width: 60
+    height: 40
+    color: "transparent"
 
     states:[
         State {

@@ -8,5 +8,7 @@
         <file>RailSignalView.qml</file>
         <file>RailTrack.qml</file>
         <file>RailTrackView.qml</file>
+        <file>RailPoint.qml</file>
+        <file>RailStationView.qml</file>
     </qresource>
 </RCC>
