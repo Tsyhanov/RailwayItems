@@ -6,5 +6,7 @@
         <file>RailShuntingSignal.qml</file>
         <file>RailSignal.qml</file>
         <file>RailSignalView.qml</file>
+        <file>RailTrack.qml</file>
+        <file>RailTrackView.qml</file>
     </qresource>
 </RCC>

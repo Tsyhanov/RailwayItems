@@ -12,7 +12,7 @@ Window {
     color: "#000000"
     title: qsTr("RailwayItems")
 
-
+    //left tab bar (Signal/Point/Track/Station)
     Container {
         id: tabBar
 
@@ -66,7 +66,7 @@ Window {
 
     }
 
-    //views
+    //use views via Loader
     Loader{
         id:viewloader
         height: 0

@@ -3,39 +3,39 @@ import QtQuick.Controls 2.12
 import QtQuick.Shapes 1.12
 
 Rectangle{
-    id: lmp_frame
+    id: track_frame
     state: "Stop"
 
     states:[
         State {
-            name: "Out of Control"
+            name: "Free"
             PropertyChanges {
-                target: lmp_up;
+                target: track_line;
                 color: "grey"
             }
         },
         State {
-            name: "Stop"
+            name: "Occupied"
             PropertyChanges {
-                target: lmp_up;
+                target: track_line;
                 color: "red"
             }
         },
          State {
-            name: "Proceed"
+            name: "Out of Control"
              PropertyChanges {
-                 target: lmp_up;
-                 color: "yellow"
+                 target: track_line;
+                 color: "magenta"
              }
          }
     ]
 
 
     Shape{
-        id: lmp_shape
-        width: 60
-        height: 40
-
+        id: track_shape
+        width: 120
+        height: 15
+/*
         ShapePath{
             startX: 0
             startY: 0
@@ -51,20 +51,16 @@ Rectangle{
             strokeWidth: 3
             PathLine{x:lmp_shape.width/3; y:lmp_shape.height/2}
         }
-
+*/
         Rectangle {
-            id: lmp_up
-            x: lmp_shape.width*0.3
+            id: track_line
+            x: 0
             y: 0
-            width: (lmp_shape.width*0.3)*2
-            height: width
-            radius: width*0.5
-//            state: "Stop"
-
+            width: track_shape.width
+            height: track_shape.height
+            state: "Out of Control"
         }
-
     }
-
 }
 
 

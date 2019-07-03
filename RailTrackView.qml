@@ -6,7 +6,6 @@ import QtQuick.Controls 2.12
 Frame{
     id: mainFrame
 
-
     Rectangle{
         id: radioStateRect
         color: "transparent"
@@ -19,7 +18,7 @@ Frame{
             RadioButton{
                 id: oocradio
                 text: "Out of Control"
-                onClicked: shuntingSignal.state = "Out of Control"
+                onClicked: track.state = "Out of Control"
                 checked: true
                 contentItem: Text {
                     text: oocradio.text
@@ -30,37 +29,37 @@ Frame{
                 }
             }
             RadioButton{
-                id: stopradio
-                text: "Stop"
-                onClicked: shuntingSignal.state = "Stop"
+                id: freeradio
+                text: "Free"
+                onClicked: track.state = "Free"
                 checked: false
                 contentItem: Text {
-                    text: stopradio.text
-                    font: stopradio.font
+                    text: freeradio.text
+                    font: freeradio.font
                     color: "white"
                     verticalAlignment: Text.AlignVCenter
-                    leftPadding: stopradio.indicator.width + stopradio.spacing
+                    leftPadding: freeradio.indicator.width + freeradio.spacing
                 }
             }
             RadioButton{
-                id: proceedradio
-                text: "Proceed"
-                onClicked: shuntingSignal.state = "Proceed"
+                id: occupiedradio
+                text: "Occupied"
+                onClicked: track.state = "Occupied"
                 checked: false
                 contentItem: Text {
-                    text: proceedradio.text
-                    font: proceedradio.font
+                    text: occupiedradio.text
+                    font: occupiedradio.font
                     color: "white"
                     verticalAlignment: Text.AlignVCenter
-                    leftPadding: proceedradio.indicator.width + proceedradio.spacing
+                    leftPadding: occupiedradio.indicator.width + occupiedradio.spacing
                 }
             }
         }
     }
 
 
-    RailShuntingSignal{
-        id: shuntingSignal
+    RailTrack{
+        id: track
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.topMargin: 250
